@@ -1,0 +1,22 @@
+<section id="menu" class="menu">
+  <h2><span>Menu</span> Kami</h2>
+  <p>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos sint aliquid
+    tenetur dolore molestias ipsum!
+  </p>
+
+  <div class="row">
+    <div *ngFor="let menu of menus" class="menu-card">
+      <img src="{{ menu.img }}" alt="Espresso" />
+      <!-- {{ menu.img }} -->
+      <h3 [title]="menu.name + ' detail'" class="menu-card-title">
+        {{ menu.name }}
+      </h3>
+
+      <p *ngIf="menu.description" class="menu-card-description">
+        {{ menu.description }}
+      </p>
+      <p *ngIf="menu.price" class="menu-card-price">{{ menu.price }}</p>
+    </div>
+  </div>
+</section>
